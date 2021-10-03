@@ -5,7 +5,7 @@
 using namespace std;
 vector<int>v;
 ///jump game 2 from leetcode
-/// bfs based solution (20ms)
+/// bfs based solution (12ms)
 ///Andrei-Bogdan Moldovan
 
 class Solution {
