@@ -1,11 +1,6 @@
-#include <iostream>
-#include <vector>
-#include <queue>
-#include <bitset>
-using namespace std;
-vector<int>v;
-///jump game 2 from leetcode
-/// bfs based solution (12ms)
+
+///jumpgame2 on leetcode
+///bfs based solution(12ms)
 ///Andrei-Bogdan Moldovan
 
 class Solution {
@@ -19,13 +14,8 @@ public:
         bitset<10004>visited;
         ///q.first is the node and q.second is the number of jumps to each node in queue
         pair<int,int>var,front_value;
-        int result=0;
-        bool found=false;
-        var.first=0;
-        var.second=0;
-        q.push(var);
-        visited[var.first]=true;
-        int i;
+        int result=0;bool found=false;var.first=0;var.second=0;
+        q.push(var);visited[var.first]=true;int i;
         while(!q.empty() && found==false){
             front_value=q.front();
             q.pop();
@@ -48,21 +38,3 @@ public:
         return result;
     }
 };
-
-int main(){
-    Solution s;
-    v.push_back(10);
-    v.push_back(9);
-    v.push_back(8);
-    v.push_back(7);
-    v.push_back(6);
-    v.push_back(5);
-    v.push_back(4);
-    v.push_back(3);
-    v.push_back(2);
-    v.push_back(1);
-    v.push_back(1);
-    v.push_back(0);
-    cout<<s.jump(v);
-    return 0;
-}
